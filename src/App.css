@@ -1,0 +1,45 @@
+.app {
+  background: white;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.form {
+  display: block;
+  background: #ebebeb;
+  min-width: 400px;
+  text-align:center;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 16px 25px 0 rgba(0,0,0,0.14), 0 12px 14px 0 rgba(0,0,0,0.12), 0 11px 14px -6px rgba(0,0,0,0.2);
+}
+
+.input {
+  background: #d1d1d1;
+  color: #333;
+  font-size: 1.5rem;
+  width:380px;
+  margin:10px 10px;
+  border-radius: 8px;
+  outline:none;
+  border:none
+}
+
+.rgbBox {
+  background: white;
+  font-size: 2rem;
+  text-align: center;
+  width:380px;
+  margin:10px 10px;
+  border-radius:5px
+}
+
+.inputbox {
+  text-align:center
+}
