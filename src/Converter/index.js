@@ -31,13 +31,13 @@ export default class Form extends React.Component {
     if (hexValue.length === 7) {
       if (hexValue.indexOf("#") != -1 && rgbValue != "") {
         this.setState({
-          input: hexValue.trim(),
+          input: "",
           rgb: rgbValue,
         });
       } else {
         this.setState({
           input: hexValue.trim(),
-          rgb: "ОШИБКА!",
+          rgb: "ERROR!",
         });
       }
     } else if (hexValue.length > 7) {
@@ -46,6 +46,7 @@ export default class Form extends React.Component {
         rgb: "ERROR!",
       });
     }
+
   };
 
   render() {
