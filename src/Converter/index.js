@@ -6,18 +6,13 @@ export default class Form extends React.Component {
     rgb: "rgb(255, 243, 212)",
   };
 
-  hexToRGB = (c) => {
-    if (/^#([a-f0-9]{3}){1,2}$/.test(c)) {
-      if (c.length === 4) {
-        c = "#" + [c[1], c[1], c[2], c[2], c[3], c[3]].join("");
-      }
-      c = "0x" + c.substring(1);
-      return (
-        "rgb(" + [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(",") + ")"
-      );
-    }
-    return "";
-  };
+  hexToRGB(hex) {
+    var r = parseInt(hex.slice(1, 3), 16),
+      g = parseInt(hex.slice(3, 5), 16),
+      b = parseInt(hex.slice(5, 7), 16);
+
+    return "rgb(" + r + ", " + g + ", " + b + ")";
+  }
 
   updateInput = (e) => {
     const hexValue = e.target.value;
@@ -46,7 +41,6 @@ export default class Form extends React.Component {
         rgb: "ERROR!",
       });
     }
-
   };
 
   render() {
